@@ -1,6 +1,6 @@
 # Practice PostgreSQL
 
-* Just a place for me to store what I learn/practice with PostgreSQL.
+* Just a place for me to store what I learn/practice with PostgreSQL and basic SQL stuff.
 
 ### PostgreSQL resources:
 
