@@ -6,24 +6,18 @@
   -- There are a few ways to go about concatenating:
 -------------------------
 -- Most DBMS:
-SELECT
-vend_name + ' (' + vend_country + ')'
-FROM
-vendors
+SELECT vend_name + ' (' + vend_country + ')'
+FROM vendors
 ORDER BY vend_name;
 
 -- PostgreSQL:
-SELECT
-vend_name || ' (' || vend_country || ')'
-FROM
-vendors
+SELECT vend_name || ' (' || vend_country || ')'
+FROM vendors
 ORDER BY vend_name;
 
 -- MySQL or MariaDB:
-SELECT
-Concat(vend_name, ' (', vend_country, ')')
-FROM
-vendors
+SELECT Concat(vend_name, ' (', vend_country, ')')
+FROM vendors
 ORDER BY vend_name;
 
 -------------------------
@@ -31,8 +25,7 @@ ORDER BY vend_name;
   -- There's also LTRIM(), which trims from the left, duh.
 -------------------------
 SELECT RTRIM(vend_name) || ' (' || RTRIM(vend_country) || ')'
-FROM
-vendors
+FROM vendors
 ORDER BY vend_name;
 
 -------------------------
@@ -41,8 +34,7 @@ ORDER BY vend_name;
   -- Let's give them ALIASES!
 -------------------------
 SELECT RTRIM(vend_name) || ' (' || RTRIM(vend_country) || ')' AS vend_title
-FROM
-vendors
+FROM vendors
 ORDER BY vend_name;
 
 -------------------------
@@ -53,10 +45,8 @@ ORDER BY vend_name;
 -- - : Subtraction
 -------------------------
 -- Let's start off with this query
-SELECT
-prod_id, quantity, item_price
-FROM
-OrderItems
+SELECT prod_id, quantity, item_price
+FROM OrderItems
 WHERE order_num = 20008;
 
 -- This returns:
@@ -69,8 +59,6 @@ WHERE order_num = 20008;
 -- BNBG03     |       10 |       3.49
 
 -- Say you wanted to find out how much it all cost total, ('quantity' times 'item_price')
-SELECT
-prod_id, quantity, item_price, quantity*item_price AS total_price
-FROM
-OrderItems
+SELECT prod_id, quantity, item_price, quantity*item_price AS total_price
+FROM OrderItems
 WHERE order_num = 20008;
