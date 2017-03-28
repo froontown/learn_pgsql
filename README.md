@@ -15,7 +15,7 @@ CLAUSE | Description | Required?
 --- | --- | ---
 SELECT | Columns or expressions to be returned | Yes
 FROM | Table to retrieve data from | Only if selecting data from a table
-WHERE | Row-level filterinG | No
+WHERE | Row-level filtering | No
 GROUP BY | Group specification | Only if calculating aggregates by group
 HAVING | Group-level filtering | No
 ORDER BY | Output sort order | No
