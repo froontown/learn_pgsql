@@ -5,7 +5,7 @@
 -------------------------
 -- You can set these pretty much wherever
 SELECT cust_name, cust_contact
-FROM customers AS C, orders AS O, orderitems as OI
+FROM customers AS C, orders AS O, orderitems AS OI
 WHERE C.cust_id = O.cust_id
   AND OI.order_num = O.order_num
   AND prod_id = 'RGAN01';
@@ -35,7 +35,7 @@ WHERE c1.cust_name = c2.cust_name
 -------------------------
 -- Natural Joins:
   -- A natural join is a join in which you select only columns that are unique
-  -- This is typically done by selecting a wildcre, (`SELECT *`), for one table and explicit subsets of the columns for all other tables:
+  -- This is typically done by selecting a wildcard, (`SELECT *`), for one table and explicit subsets of the columns for all other tables:
 -------------------------
 SELECT C.*, O.order_num, O.order_date, OI.prod_id, OI.quantity, OI.item_price
 FROM customers AS C, orders AS O, orderitems as OI
